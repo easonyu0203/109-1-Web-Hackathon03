@@ -26,6 +26,7 @@ const dboptions = {
   poolSize: 10
 }
 // TODO : connect mongodb here
+mongoose.connect(process.env.MONGO_URL, { useNewUrlParser: true, useUnifiedTopology: true }, (err) => console.log('connected to mongodb...'))
 
 routes(app)
 

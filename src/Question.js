@@ -27,8 +27,10 @@ class Question extends Component {
     // TODO : update 'ans' for the option you clicked
   }
 
-  getQuestions = () => {
-    // TODO : get questions from backend
+  getQuestions = async () => {
+	// TODO : get questions from backend
+	const questions = await instance.get('/getContents');
+	console.log(questions);
   }
 
   componentDidMount() {
